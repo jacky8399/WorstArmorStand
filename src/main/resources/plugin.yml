@@ -1,0 +1,25 @@
+name: WorstArmorStand
+version: '${version}'
+main: dev.sunbread.worstarmorstand.WorstArmorStand
+api-version: 1.18
+authors: [ Sunbread, jacky8399 ]
+description: The worst armor stand toolkit
+permissions:
+  worstas.use:
+    default: op
+    children:
+      worstas.use.slot: true
+      worstas.use.pose: true
+      worstas.use.shift: true
+      worstas.use.move: true
+      worstas.use.name: true
+      worstas.use.arms: true
+      worstas.use.base: true
+      worstas.use.vis: true
+      worstas.use.lock: true
+      worstas.use.grav: true
+      worstas.use.invul: true
+      worstas.use.small: true
+      worstas.use.glow: true
+      worstas.use.clone: true
+      worstas.use.del: true

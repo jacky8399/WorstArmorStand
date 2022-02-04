@@ -1,0 +1,26 @@
+package dev.sunbread.worstarmorstand.gui.features;
+
+import dev.sunbread.worstarmorstand.gui.GUIMetaData;
+import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.ClickType;
+import org.bukkit.inventory.ItemStack;
+
+public abstract class SlotFeature implements Feature {
+
+    public ItemStack getItem(Player player, GUIMetaData meta) {
+        return getSlot(meta);
+    }
+
+    @Override
+    public void operate(Player player, GUIMetaData meta, ClickType click, ItemStack oldItem, ItemStack newItem) {
+        if (click == ClickType.LEFT) {
+            setSlot(meta, newItem);
+            player.setItemOnCursor(oldItem);
+        }
+    }
+
+    protected abstract ItemStack getSlot(GUIMetaData meta);
+
+    protected abstract void setSlot(GUIMetaData meta, ItemStack is);
+
+}
