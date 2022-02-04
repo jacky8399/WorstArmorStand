@@ -28,7 +28,7 @@ public final class EquipmentLockFeature implements Feature {
     @Override
     public void operate(Player player, GUIMetaData meta, ClickType click, ItemStack oldItem, ItemStack newItem) {
         var as = meta.getArmorStand();
-        Util.setEquipmentLock(as, Util.hasEquipmentLock(as));
+        Util.setEquipmentLock(as, !Util.hasEquipmentLock(as));
     }
 
 }
