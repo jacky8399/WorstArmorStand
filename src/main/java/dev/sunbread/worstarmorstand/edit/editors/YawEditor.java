@@ -16,7 +16,6 @@ public final class YawEditor implements Editor {
 
     @Override
     public void apply(int delta) {
-        double dx = 0, dy = 0, dz = 0;
         var velocity = Math.signum(delta) * Math.pow(delta, 2) * 1;
         var loc = as.getLocation();
         loc.setYaw((float) (loc.getYaw() + velocity));
