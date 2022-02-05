@@ -30,7 +30,7 @@ public final class YawEditor implements Editor {
 
     @Override
     public String getHint() {
-        return ChatColor.YELLOW + "Rotation";
+        return ChatColor.YELLOW + "Rotate";
     }
 
 }
