@@ -49,23 +49,8 @@ public final class EulerAngleEditor implements Editor {
 
     @Override
     public String getHint() {
-        return ChatColor.YELLOW + mode.toReadableString()/* + "|" + extractValue(switch (type) {
-            case HEAD -> as.getHeadPose();
-            case BODY -> as.getBodyPose();
-            case LEFT_ARM -> as.getLeftArmPose();
-            case RIGHT_ARM -> as.getRightArmPose();
-            case LEFT_LEG -> as.getLeftLegPose();
-            case RIGHT_LEG -> as.getRightLegPose();
-        })*/;
+        return ChatColor.YELLOW + mode.toReadableString();
     }
-
-    /*private String extractValue(EulerAngle angle) {
-        return new DecimalFormat("0.0").format((Math.round(Math.toDegrees(switch (mode) {
-            case X -> angle.getX();
-            case Y -> angle.getY();
-            case Z -> angle.getZ();
-        }) * 10) / 10.0 + 360) % 360);
-    }*/
 
     public enum PoseType {HEAD, BODY, LEFT_ARM, RIGHT_ARM, LEFT_LEG, RIGHT_LEG}
 
