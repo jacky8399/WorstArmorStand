@@ -3,6 +3,8 @@ package dev.sunbread.worstarmorstand.gui;
 import dev.sunbread.worstarmorstand.Util;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.Sound;
+import org.bukkit.SoundCategory;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
@@ -26,6 +28,7 @@ public final class GUI {
         var feature = Features.getFeatureBySlot(slot);
         if (feature == null) return;
         if (!player.hasPermission(feature.getPermission())) return;
+        player.playSound(player, Sound.BLOCK_NOTE_BLOCK_BELL, SoundCategory.MASTER, 1.0F, 2.0F);
         feature.getContent().operate(player, getMetaData(inv), click, current, cursor);
         refreshGUI(player, inv);
     }
