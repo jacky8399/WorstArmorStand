@@ -16,7 +16,7 @@ public class NameInput implements Input {
             as.setCustomName(null);
             as.setCustomNameVisible(false);
         } else {
-            as.setCustomName(ChatColor.stripColor(str));
+            as.setCustomName(ChatColor.translateAlternateColorCodes('&', str));
             as.setCustomNameVisible(true);
         }
         return true;
