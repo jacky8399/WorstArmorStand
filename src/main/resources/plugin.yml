@@ -11,6 +11,7 @@ permissions:
       worstas.use.slot: true
       worstas.use.pose: true
       worstas.use.shift: true
+      worstas.use.rot: true
       worstas.use.move: true
       worstas.use.name: true
       worstas.use.arms: true
