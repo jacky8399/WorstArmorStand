@@ -1,3 +1,18 @@
+# 0.0.3 (2022-02-05)
+
+
+### Bug Fixes
+
+* cannot dye the name ([510da62](https://github.com/Sunbread/WorstArmorStand/commit/510da62e8d605bf19254d702898fb157836a0b2e))
+* rotate tool too precise ([f184129](https://github.com/Sunbread/WorstArmorStand/commit/f184129dfd393eacd8deb166d1c169c88b3ff114))
+
+
+### Features
+
+* add bStats ([b991d3d](https://github.com/Sunbread/WorstArmorStand/commit/b991d3dbebd3ac6ad4a71dc2a997b9bc533b665e))
+
+
+
 # 0.0.2 (2022-02-05)
 
 
