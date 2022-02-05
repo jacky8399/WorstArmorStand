@@ -11,9 +11,18 @@ import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.Objects;
+
 public final class GUI {
     private static final int GUI_SIZE = 54;
     private static final ItemStack BACKGROUND_ITEM = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
+
+    static {
+        var im = Objects.requireNonNull(BACKGROUND_ITEM.getItemMeta());
+        im.setDisplayName(" ");
+        Util.addItemFlags(im);
+        BACKGROUND_ITEM.setItemMeta(im);
+    }
 
     public static void createGUI(Player player, ArmorStand as) {
         var name = as.getCustomName();
