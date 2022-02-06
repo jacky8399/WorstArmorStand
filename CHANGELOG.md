@@ -1,3 +1,12 @@
+# 0.0.4 (2022-02-06)
+
+
+### Features
+
+* add event calls to slots ([5cfeff8](https://github.com/Sunbread/WorstArmorStand/commit/5cfeff8be049ae4ad40a3aee8253b4d47393bc6d))
+
+
+
 # 0.0.3 (2022-02-05)
 
 
