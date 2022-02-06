@@ -13,7 +13,7 @@ public abstract class SlotFeature implements Feature {
 
     @Override
     public void operate(Player player, GUIMetaData meta, ClickType click, ItemStack oldItem, ItemStack newItem) {
-        if (click == ClickType.LEFT) {
+        if (click == ClickType.LEFT && check(player, meta, oldItem, newItem)) {
             setSlot(meta, newItem);
             player.setItemOnCursor(oldItem);
         }
@@ -22,5 +22,7 @@ public abstract class SlotFeature implements Feature {
     protected abstract ItemStack getSlot(GUIMetaData meta);
 
     protected abstract void setSlot(GUIMetaData meta, ItemStack is);
+
+    protected abstract boolean check(Player player, GUIMetaData meta, ItemStack oldItem, ItemStack newItem);
 
 }
