@@ -17,7 +17,6 @@ public final class SelectorListener implements Listener {
         if (!(event.getRightClicked() instanceof ArmorStand as)) return;
         if (Util.isUsing(event.getPlayer()) || Util.isInUse(as)) return;
         if (event.getPlayer().isSneaking()) {
-            //EditorManager.INSTANCE.setEditor(event.getPlayer(), new EulerAngleEditor(as, EulerAngleEditor.PoseType.HEAD));
             GUI.createGUI(event.getPlayer(), as);
             event.setCancelled(true);
         }
