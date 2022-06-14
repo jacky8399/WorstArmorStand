@@ -1,3 +1,12 @@
+# 0.0.5 (2022-06-14)
+
+
+### Features
+
+* add in-use notice ([6a386e7](https://github.com/Sunbread/WorstArmorStand/commit/6a386e7c0b21d889766d806e0590a7562fb6ec55))
+
+
+
 # 0.0.4 (2022-02-06)
 
 
