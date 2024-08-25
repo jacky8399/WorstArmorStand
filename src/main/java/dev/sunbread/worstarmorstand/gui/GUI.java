@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class GUI {
         GUIRecorder.INSTANCE.recordUse(player, as);
     }
 
-    public static void click(Player player, Inventory inv, int slot, ClickType click, ItemStack current, ItemStack cursor) {
+    public static void click(Player player, Inventory inv, int slot, ClickType click, @NotNull ItemStack current, @NotNull ItemStack cursor) {
         var feature = Features.getFeatureBySlot(slot);
         if (feature == null) return;
         if (!player.hasPermission(feature.getPermission())) return;

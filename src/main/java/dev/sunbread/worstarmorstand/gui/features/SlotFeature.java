@@ -4,6 +4,7 @@ import dev.sunbread.worstarmorstand.gui.GUIMetaData;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.ItemStack;
+import org.jetbrains.annotations.NotNull;
 
 public abstract class SlotFeature implements Feature {
 
@@ -12,7 +13,7 @@ public abstract class SlotFeature implements Feature {
     }
 
     @Override
-    public void operate(Player player, GUIMetaData meta, ClickType click, ItemStack oldItem, ItemStack newItem) {
+    public void operate(Player player, GUIMetaData meta, ClickType click, @NotNull ItemStack oldItem, @NotNull ItemStack newItem) {
         if (click == ClickType.LEFT && check(player, meta, oldItem, newItem)) {
             setSlot(meta, newItem);
             player.setItemOnCursor(oldItem);
